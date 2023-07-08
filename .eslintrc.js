@@ -38,6 +38,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": 'off',
     "no-underscore-dangle": 'off',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'max-length': ['error', { ignoreComments: true }],
   },
   globals: {
     IS_DEV: true,
