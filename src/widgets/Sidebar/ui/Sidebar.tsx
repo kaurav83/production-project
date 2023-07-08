@@ -1,6 +1,6 @@
 import { type FC, type ReactElement, useState } from 'react'
 
-import { classNames } from 'shared/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
