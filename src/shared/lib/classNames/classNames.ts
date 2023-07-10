@@ -8,4 +8,4 @@ export const classNames = (cls: string, additional: string[] = [], mods: Mods = 
       .filter(([, value]) => Boolean(value))
       .map(([className]) => className)
   ].join(' ')
-}
+};

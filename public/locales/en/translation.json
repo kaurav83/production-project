@@ -1,5 +1,8 @@
 {
   "translate": "Ru",
   "aboutSite": "About site",
-  "mainPage": "Main page"
+  "mainPage": "Main page",
+  "notFound": "Not found page",
+  "unexpectedError": "An unexpected error occurred",
+  "reloadPage": "Reload page"
 }

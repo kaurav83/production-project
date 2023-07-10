@@ -1,11 +1,11 @@
-import { type FC, type ReactElement, useState } from 'react'
+import { type FC, type ReactElement, useState } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames';
 
-import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher'
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
-import { Button } from 'shared/ui/Button/Button'
-import cls from './Sidebar.module.scss'
+import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import { Button } from 'shared/ui/Button/Button';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string
@@ -13,11 +13,11 @@ interface SidebarProps {
 }
 
 export const Sidebar: FC<SidebarProps> = ({ className = '', children }) => {
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState(false);
 
   const onToggle = () => {
-    setCollapsed(!collapsed)
-  }
+    setCollapsed(!collapsed);
+  };
 
   return (
     <div className={classNames(cls.sidebar, [className], { [cls.collapsed]: collapsed })}>
@@ -32,4 +32,4 @@ export const Sidebar: FC<SidebarProps> = ({ className = '', children }) => {
       {children}
     </div>
   )
-}
+};
