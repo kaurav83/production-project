@@ -1,0 +1,59 @@
+[33mcommit c7cb6b92019281df2b878ca50f0c1bf23db24575[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Fri Jul 14 15:57:36 2023 +0300
+
+    save
+
+[33mcommit 359827605a7ef7765dd0c1285d45194985e604fd[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Fri Jul 14 12:50:03 2023 +0300
+
+    settings storybook
+
+[33mcommit 243d63c470380685d11d57f750fe403b87955367[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Mon Jul 10 12:12:27 2023 +0300
+
+    implemented Loader, ErrorBoundary
+
+[33mcommit 04035b92304993b31d3f7fa46c86bba9ff93edad[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Sat Jul 8 21:24:15 2023 +0300
+
+    save
+
+[33mcommit 0af069002783042a9e86c9187944b852d0e78a6f[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Sat Jul 8 21:21:03 2023 +0300
+
+    implemented first test by jest
+
+[33mcommit 57a3e834e695f6639433407f73a6cbee89cfd44f[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Mon Jul 3 10:25:03 2023 +0300
+
+    settings stylelint
+
+[33mcommit 9e8b19d17f1183fb3fd9f014b13cf5ce7af29def[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Sun Jul 2 23:42:29 2023 +0300
+
+    settings es-lint
+
+[33mcommit 416baa58979f8d3603282ba00349e7fded71e9e2[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Sun Jul 2 13:15:52 2023 +0300
+
+    save
+
+[33mcommit 6a0662277fa834a24392c434610217e0a9efe154[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Fri Jun 30 00:17:36 2023 +0300
+
+    add config folder
+
+[33mcommit 5e7590c607af27faab05566dc7e05fbfdfa90683[m
+Author: kaurav83 <puga.vitaliy@gmail.com>
+Date:   Thu Jun 29 23:40:30 2023 +0300
+
+    first commit
