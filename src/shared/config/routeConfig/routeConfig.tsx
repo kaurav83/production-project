@@ -1,4 +1,3 @@
-
 import { type RouteProps } from 'react-router-dom';
 
 import { AboutPage } from 'pages/AboutPage';
@@ -20,14 +19,14 @@ export const RoutePath: { [key in AppRoutes]: string } = {
 export const routeConfig: { [key in AppRoutes]: RouteProps } = {
   [AppRoutes.MAIN]: {
     path: RoutePath.main,
-    element: <MainPage />
+    element: <MainPage />,
   },
   [AppRoutes.ABOUT]: {
     path: RoutePath.about,
-    element: <AboutPage />
+    element: <AboutPage />,
   },
   [AppRoutes.NOT_FOUND]: {
     path: RoutePath.not_found,
-    element: <NotFoundPage/>
+    element: <NotFoundPage />,
   },
 };

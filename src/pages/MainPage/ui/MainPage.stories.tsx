@@ -1,20 +1,21 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ReactElement } from 'react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import MainPage from './MainPage';
 
 export default {
-    title: 'pages/MainPage',
-    component: MainPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-    args: {
-        to: '/',
-    },
+  title: 'pages/MainPage',
+  component: MainPage,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+  args: {
+    to: '/',
+  },
 } as ComponentMeta<typeof MainPage>;
 
-const Template: ComponentStory<typeof MainPage> = (args: JSX.Element) => <MainPage {...args} />;
+const Template: ComponentStory<typeof MainPage> = (args: ReactElement) => <MainPage {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

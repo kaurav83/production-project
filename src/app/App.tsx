@@ -3,10 +3,9 @@ import { Suspense, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 
-import { AppRouter } from './providers/router';
-
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
+import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
 const App = () => {
@@ -24,7 +23,7 @@ const App = () => {
         </div>
       </Suspense>
     </div>
-  )
+  );
 };
 
 export default App;

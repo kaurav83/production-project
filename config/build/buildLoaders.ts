@@ -1,28 +1,28 @@
-import type webpack from 'webpack'
+import type webpack from 'webpack';
 
-import { type BuildOptions } from './types/config'
-import { buildCssLoaders } from './loaders/buildCssLoaders'
+import { type BuildOptions } from './types/config';
+import { buildCssLoaders } from './loaders/buildCssLoaders';
 
 export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => {
   const svgLoader = {
     test: /\.svg$/,
-    use: ['@svgr/webpack']
-  }
+    use: ['@svgr/webpack'],
+  };
 
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
-    exclude: /node_modules/
-  }
+    exclude: /node_modules/,
+  };
 
   const fileLoader = {
     test: /\.(png|jp?g|git|woff2|woff)$/i,
     use: [
       {
-        loader: 'file-loader'
-      }
-    ]
-  }
+        loader: 'file-loader',
+      },
+    ],
+  };
 
   const cssLoaders = buildCssLoaders(isDev);
 
@@ -30,6 +30,6 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     typescriptLoader,
     cssLoaders,
     fileLoader,
-    svgLoader
-  ]
-}
+    svgLoader,
+  ];
+};

@@ -37,10 +37,10 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         <Suspense fallback={<div>Loading languages...</div>}>
           <PageError />
         </Suspense>
-      )
+      );
     }
 
-    return children; 
+    return children;
   }
 }
 

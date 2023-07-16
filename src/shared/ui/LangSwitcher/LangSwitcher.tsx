@@ -24,5 +24,5 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
     >
       {t('translate')}
     </Button>
-  )
+  );
 };

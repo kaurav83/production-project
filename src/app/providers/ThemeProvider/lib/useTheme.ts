@@ -14,13 +14,13 @@ export const useTheme = (): IUseThemeResult => {
     const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
 
     if (setTheme != null) {
-      setTheme(newTheme)
-      localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
+      setTheme(newTheme);
+      localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     }
   };
 
   return {
     theme,
-    toggleTheme
-  }
+    toggleTheme,
+  };
 };

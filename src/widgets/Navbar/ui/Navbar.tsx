@@ -21,5 +21,5 @@ export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
         <AppLink to="/about" theme={AppLinkTheme.SECONDARY}>{t('aboutSite')}</AppLink>
       </div>
     </div>
-  )
+  );
 };

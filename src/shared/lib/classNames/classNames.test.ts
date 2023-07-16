@@ -1,5 +1,4 @@
-import { classNames } from "shared/lib/classNames/classNames";
-
+import { classNames } from 'shared/lib/classNames/classNames';
 
 describe('classNames', () => {
   const expected = 'some-selector some-selector-into-array';
@@ -14,22 +13,19 @@ describe('classNames', () => {
 
   test('with mods', () => {
     expect(
-      classNames(
-        'some-selector', ['some-selector-into-array'], { selected: true, hovered: true }
-      )).toBe(expected + ' ' + 'selected' + ' ' + 'hovered');
+      classNames('some-selector', ['some-selector-into-array'], { selected: true, hovered: true }),
+    ).toBe(`${expected} selected hovered`);
   });
 
   test('with mods false', () => {
     expect(
-      classNames(
-        'some-selector', ['some-selector-into-array'], { selected: false, hovered: true }
-      )).toBe(expected + ' ' + 'hovered');
+      classNames('some-selector', ['some-selector-into-array'], { selected: false, hovered: true }),
+    ).toBe(`${expected} hovered`);
   });
 
   test('with mods undefined', () => {
     expect(
-      classNames(
-        'some-selector', ['some-selector-into-array'], { selected: true, hovered: undefined }
-      )).toBe(expected + ' ' + 'selected');
+      classNames('some-selector', ['some-selector-into-array'], { selected: true, hovered: undefined }),
+    ).toBe(`${expected} selected`);
   });
 });
