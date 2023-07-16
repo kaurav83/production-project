@@ -1,4 +1,5 @@
 import { type FC, type ReactElement, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
@@ -7,6 +8,7 @@ import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { Button } from 'shared/ui/Button/Button';
 import cls from './Sidebar.module.scss';
 
+
 interface SidebarProps {
   className?: string
   children?: string | ReactElement
@@ -14,6 +16,8 @@ interface SidebarProps {
 
 export const Sidebar: FC<SidebarProps> = ({ className = '', children }) => {
   const [collapsed, setCollapsed] = useState(false);
+
+  const { t } = useTranslation();
 
   const onToggle = () => {
     setCollapsed(!collapsed);
@@ -28,7 +32,7 @@ export const Sidebar: FC<SidebarProps> = ({ className = '', children }) => {
         data-testid="toggle-sidebar"
         onClick={onToggle}
       >
-          Toggle
+        {t('toggle')}
       </Button>
 
       <div className={cls.switchers}>

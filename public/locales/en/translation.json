@@ -4,5 +4,6 @@
   "mainPage": "Main page",
   "notFound": "Not found page",
   "unexpectedError": "An unexpected error occurred",
-  "reloadPage": "Reload page"
+  "reloadPage": "Reload page",
+  "toggle": "Toggle"
 }
