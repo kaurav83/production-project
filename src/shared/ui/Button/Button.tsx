@@ -8,12 +8,22 @@ import 'app/styles/index.scss';
 export enum ThemeButton {
   CLEAR = 'clear',
   OUTLINE = 'outline',
+  BACKGROUND = 'background',
+  BACKGROUND_INVERTED = 'background-inverted',
+}
+
+export enum SizeButton {
+  M = 'size-m',
+  L = 'size-l',
+  XL = 'size-xl',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   children?: string | ReactElement
   theme?: ThemeButton
+  square?: boolean;
+  size?: string;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -21,13 +31,21 @@ export const Button: FC<ButtonProps> = (props) => {
     className = '',
     children,
     theme = '',
+    square,
+    size = SizeButton.L,
     ...otherProps
   } = props;
+
+  const mods = {
+    [cls[theme]]: true,
+    [cls.square]: square,
+    [cls[size]]: size,
+  };
 
   return (
     <button
       type="button"
-      className={classNames(cls.button, [className], { [cls[theme]]: true })}
+      className={classNames(cls.button, [className], mods)}
       {...otherProps}
     >
       {children}
