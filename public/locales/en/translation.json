@@ -6,5 +6,6 @@
   "notFound": "Not found page",
   "unexpectedError": "An unexpected error occurred",
   "reloadPage": "Reload page",
-  "toggle": "Toggle"
+  "toggle": "Toggle",
+  "enter": "Enter"
 }
