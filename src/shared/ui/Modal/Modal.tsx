@@ -3,6 +3,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -25,6 +26,7 @@ export const Modal: FC<ModalProps> = (props) => {
     onClose,
   } = props;
   const { t } = useTranslation();
+  const { theme = '' } = useTheme();
 
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
