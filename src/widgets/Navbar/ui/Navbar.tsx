@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { Modal } from 'shared/ui/Modal/Modal';
+import { LoginModal } from 'features/AuthByUsername';
 import cls from './Navbar.module.scss';
 
 interface INavbarProps {
@@ -16,43 +16,28 @@ export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
 
   const [isAuthModal, setAuthModal] = useState(false);
 
-  const handleToggleModal = useCallback(() => {
-    setAuthModal(!isAuthModal);
+  const handleCloseModal = useCallback(() => {
+    setAuthModal(false);
   }, [isAuthModal]);
+
+  const handleShowModal = useCallback(() => {
+    setAuthModal(true);
+  }, []);
 
   return (
     <div className={classNames(cls.navbar, [className])}>
       <Button
         className={cls.enter}
         theme={ThemeButton.CLEAR_INVERTED}
-        onClick={handleToggleModal}
+        onClick={handleShowModal}
       >
         {t('enter')}
       </Button>
 
-      <Modal
+      <LoginModal
         isOpen={isAuthModal}
-        onClose={handleToggleModal}
-      >
-        {/* eslint-disable-next-line i18next/no-literal-string */}
-        <div>
-          TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT
-          TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT
-          TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX
-          TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT
-          TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT
-          TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX
-          TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT
-          TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT
-          TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX
-          TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT
-          TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT
-          TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX
-          TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT
-          TEXT TEXT TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT
-          TEXT TEXT TEXT TEX TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEX
-        </div>
-      </Modal>
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };

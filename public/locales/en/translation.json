@@ -7,5 +7,7 @@
   "unexpectedError": "An unexpected error occurred",
   "reloadPage": "Reload page",
   "toggle": "Toggle",
-  "enter": "Enter"
+  "enter": "Enter",
+  "enterUsername": "Enter username",
+  "enterPassword": "Enter password"
 }

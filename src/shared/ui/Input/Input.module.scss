@@ -1,0 +1,23 @@
+.input-wrapper {
+  display: flex;
+}
+
+.placeholder {
+  margin-right: 5px;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.carriage-wrapper {
+  flex-grow: 1;
+  position: relative;
+}

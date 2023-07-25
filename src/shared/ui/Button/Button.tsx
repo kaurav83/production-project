@@ -33,7 +33,7 @@ export const Button: FC<ButtonProps> = (props) => {
     children,
     theme = '',
     square,
-    size = SizeButton.L,
+    size = SizeButton.M,
     ...otherProps
   } = props;
 
