@@ -1,14 +1,19 @@
 {
   "aboutSite": "",
+  "authForm": "",
   "decrement": "",
   "enter": "",
   "enterPassword": "",
   "enterUsername": "",
+  "exit": "",
   "increment": "",
+  "logout": "",
   "mainPage": "",
   "notFound": "",
+  "rejectMessageLogin": "",
   "reloadPage": "",
   "toggle": "",
   "translate": "",
-  "unexpectedError": ""
+  "unexpectedError": "",
+  "Неверный логин или пароль": ""
 }

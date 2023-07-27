@@ -9,5 +9,8 @@
   "toggle": "Переключить",
   "enter": "Войти",
   "enterUsername": "Введите имя пользователя",
-  "enterPassword": "Введите пароль"
+  "enterPassword": "Введите пароль",
+  "authForm": "Форма авторизации",
+  "rejectMessageLogin": "Неверный логин или пароль",
+  "logout": "Выйти"
 }

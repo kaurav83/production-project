@@ -9,5 +9,8 @@
   "toggle": "Toggle",
   "enter": "Enter",
   "enterUsername": "Enter username",
-  "enterPassword": "Enter password"
+  "enterPassword": "Enter password",
+  "authForm": "Authorization form",
+  "rejectMessageLogin": "Invalid login or password",
+  "logout": "Logout"
 }
