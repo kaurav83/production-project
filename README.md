@@ -3,7 +3,7 @@ Welcome! 🚀
 1. To install dependencies, execute:
 
 ```sh
-npm i --legacy-peer-deps
+npm install
 ```
 
 2. To start the project, execute:
