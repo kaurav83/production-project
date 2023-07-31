@@ -22,7 +22,7 @@ export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
 
   const handleCloseModal = useCallback(() => {
     setAuthModal(false);
-  }, [isAuthModal]);
+  }, []);
 
   const handleShowModal = useCallback(() => {
     setAuthModal(true);
@@ -30,7 +30,7 @@ export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
 
   const handleLogout = useCallback(() => {
     dispatch(userActions.logout());
-  }, []);
+  }, [dispatch]);
 
   if (authData) {
     return (
@@ -56,10 +56,12 @@ export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
         {t('enter')}
       </Button>
 
-      <LoginModal
-        isOpen={isAuthModal}
-        onClose={handleCloseModal}
-      />
+      {isAuthModal && (
+        <LoginModal
+          isOpen={isAuthModal}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 };
