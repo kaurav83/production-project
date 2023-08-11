@@ -1,15 +1,12 @@
-import { type FC, type ReactElement, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { ReactElement, memo, useState } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import AboutIcon from 'shared/assets/icons/about.svg';
-import MainIcon from 'shared/assets/icons/home.svg';
+import { SidebarItem } from './SidebarItem';
+import { SidebarItemsList } from '../model/items';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -17,10 +14,8 @@ interface SidebarProps {
   children?: string | ReactElement
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className = '', children }) => {
+export const Sidebar = memo(({ className = '', children }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
-
-  const { t } = useTranslation();
 
   const onToggle = () => {
     setCollapsed(!collapsed);
@@ -42,33 +37,14 @@ export const Sidebar: FC<SidebarProps> = ({ className = '', children }) => {
       </Button>
 
       <ul className={cls.links}>
-        <li className={cls['link-wrap']}>
-          <AppLink
-            to={RoutePath.main}
-            theme={AppLinkTheme.SECONDARY}
-            className={cls.link}
-          >
-            <MainIcon className={cls.icon} />
-
-            <span className={cls['text-link']}>
-              {t('mainPage')}
-            </span>
-          </AppLink>
-        </li>
-
-        <li className={cls['link-wrap']}>
-          <AppLink
-            to={RoutePath.about}
-            theme={AppLinkTheme.SECONDARY}
-            className={cls.link}
-          >
-            <AboutIcon className={cls.icon} />
-
-            <span className={cls['text-link']}>
-              {t('aboutSite')}
-            </span>
-          </AppLink>
-        </li>
+        {SidebarItemsList.map((item) => (
+          <li className={cls['link-wrap']} key={item.path}>
+            <SidebarItem
+              item={item}
+              collapsed={collapsed}
+            />
+          </li>
+        ))}
       </ul>
 
       <div className={cls.switchers}>
@@ -83,4 +59,4 @@ export const Sidebar: FC<SidebarProps> = ({ className = '', children }) => {
       {children}
     </div>
   );
-};
+});

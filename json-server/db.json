@@ -5,7 +5,16 @@
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "typicode" },
+  "profile": {
+    "firstName": "Vitaliy",
+    "lastName": "Puga",
+    "age": 40,
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Odessa",
+    "username": "admin",
+    "avatar": "https://www.seekpng.com/png/full/14-146665_man-person-avatar-face-head-portrait-glass-person.png"
+  },
   "users": [
     {
       "id": 1,

@@ -1,0 +1,22 @@
+.icon {
+  fill: var(--inverted-primary-color);
+}
+
+.link {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-link {
+  opacity: 1;
+}
+
+.collapsed {
+  .text-link {
+    opacity: 0;
+    transition: .2s opacity;
+    width: 0;
+  }
+}

@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,7 +13,7 @@ interface INavbarProps {
   className?: string
 }
 
-export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
+export const Navbar = memo(({ className = '' }: INavbarProps) => {
   const { t } = useTranslation();
   const authData = useSelector(getUserData);
   const dispatch = useDispatch();
@@ -64,4 +64,4 @@ export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
       )}
     </div>
   );
-};
+});

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { memo } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
@@ -10,16 +10,14 @@ export enum TextTheme {
 
 interface TextProps {
   className?: string;
-  children?: ReactNode;
   description?: string;
   title?: string;
   theme?: TextTheme;
 }
 
-export const Text = (props: TextProps) => {
+export const Text = memo((props: TextProps) => {
   const {
     className = '',
-    children,
     title,
     description,
     theme = TextTheme.PRIMARY,
@@ -40,4 +38,4 @@ export const Text = (props: TextProps) => {
       )}
     </div>
   );
-};
+});

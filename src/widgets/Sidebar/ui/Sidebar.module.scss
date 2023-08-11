@@ -40,21 +40,6 @@
   margin-top: 10px;
 }
 
-.icon {
-  fill: var(--inverted-primary-color);
-}
-
-.link {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 10px;
-}
-
-.text-link {
-  opacity: 1;
-}
-
 .collapsed {
   width: var(--sidebar-width-collapsed);
 
@@ -64,11 +49,5 @@
 
   .lang {
     margin-left: unset;
-  }
-
-  .text-link {
-    opacity: 0;
-    transition: .2s opacity;
-    width: 0;
   }
 }
