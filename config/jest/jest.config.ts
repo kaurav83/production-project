@@ -74,6 +74,7 @@ export default {
   // A set of global variables that need to be available in all test environments
   globals: {
     IS_DEV: true,
+    __API__: '',
   },
 
   // Indicates which provider should be used to instrument code for coverage

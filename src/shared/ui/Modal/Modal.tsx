@@ -1,5 +1,5 @@
 import {
-  FC, ReactNode, MouseEvent, useState, useRef, useEffect, useCallback,
+  FC, ReactNode, MouseEvent, useState, useRef, useEffect, useCallback, MutableRefObject,
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -30,7 +30,7 @@ export const Modal: FC<ModalProps> = (props) => {
   const { t } = useTranslation();
   const { theme = '' } = useTheme();
 
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
   const [isClosing, setClosing] = useState(false);
   const [isMounted, setMounted] = useState(false);
@@ -71,7 +71,7 @@ export const Modal: FC<ModalProps> = (props) => {
     };
   }, [isOpen, handleKeyDown]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Record<string, boolean | string | undefined> = {
     [cls.opened]: isOpen,
     [cls['is-closing']]: isClosing,
   };

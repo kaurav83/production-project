@@ -1,6 +1,7 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { getUserData, userActions } from 'entities/User';
@@ -17,6 +18,7 @@ export const Navbar = memo(({ className = '' }: INavbarProps) => {
   const { t } = useTranslation();
   const authData = useSelector(getUserData);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [isAuthModal, setAuthModal] = useState(false);
 
@@ -30,7 +32,8 @@ export const Navbar = memo(({ className = '' }: INavbarProps) => {
 
   const handleLogout = useCallback(() => {
     dispatch(userActions.logout());
-  }, [dispatch]);
+    navigate('/');
+  }, [dispatch, navigate]);
 
   if (authData) {
     return (
